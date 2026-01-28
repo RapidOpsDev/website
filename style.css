@@ -31,7 +31,9 @@ header {
   align-items: center;
   padding: 0.75rem 1.5rem;
 }
-.logo { font-size: 1.25rem; font-weight: 700; letter-spacing: 1px; }
+.logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem; font-weight: 700; letter-spacing: 1px; }
+.logo-img { width: 28px; height: 28px; object-fit: contain; border-radius: 4px; }
+.logo-text { display: inline-block; }
 nav a {
   color: var(--text);
   margin-left: 1rem;
@@ -55,6 +57,7 @@ nav a:hover { background: #1f2530; }
 }
 .hero-overlay { position: absolute; inset: 0; background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" opacity=\"0.06\"><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"%233b82f6\"/><stop offset=\"1\" stop-color=\"%2322c55e\"/></linearGradient></defs><path d=\"M0 50 Q 25 40 50 50 T 100 50\" stroke=\"url(#g)\" stroke-width=\"1\" fill=\"none\"/></svg>') center/cover no-repeat; }
 .hero-content { position: relative; max-width: 900px; }
+.hero-logo { width: 72px; height: 72px; object-fit: contain; border-radius: 8px; margin-bottom: 0.75rem; opacity: 0.95; }
 .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1rem; }
 .hero p { color: var(--muted); margin: 0 0 2rem; }
 .cta {
