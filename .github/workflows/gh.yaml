@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout code"
@@ -27,24 +27,8 @@ jobs:
       - name: "Build website"
         run: npm run build
 
-      - name: "Upload build artifact"
-        uses: actions/upload-artifact@v7
-        with:
-          name: website-dist
-          path: dist/*
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Download build artifact"
-        uses: actions/download-artifact@v8
-        with:
-          name: website-dist
-
       - name: "Deploy to GitHub Pages"
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: website-dist
-
+          publish_dir: ./dist
