@@ -49,7 +49,6 @@ const brands = [
   { name: "AppCargo", domain: 'appcargo.com' },
   { name: "Evermed TV", domain: 'evermedtv.com' },
   { name: "Mister D", domain: 'misterd.rs' },
-  { name: "Mozzart Bet", domain: 'mozzartbet.com' },
 ];
 
 export default function App() {
